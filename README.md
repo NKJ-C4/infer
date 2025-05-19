@@ -1,2 +1,2 @@
 # phaser
-Analytics Chat Bot prototype by the team - Gryffindor
+Analytics Chat Bot prototype.
