@@ -1,0 +1,34 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Python virtual environment
+venv/
+
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+
+# Ignore log files
+logs/
+*.log
+
+# Ignore environment files
+.env
+.venv
+
+# Ignore dependency files
+node_modules/
+package-lock.json
+
+# Ignore IDE settings
+.vscode/
+.idea/
+
+# Ignore build and temporary files
+dist/
+build/
+*/cli-secrets*
+
+*Zone*
+*/*Zone*

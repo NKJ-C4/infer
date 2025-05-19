@@ -1,2 +1,2 @@
-# infer
-Analytics Chatbot implemented using LLMs
+# phaser
+Analytics Chat Bot prototype by the team - Gryffindor

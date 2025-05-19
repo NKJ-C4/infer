@@ -1,0 +1,211 @@
+name: hackbot_model_iter_1
+comment: This semantic model contains information of sales data, features data and store related information.
+tables:
+  - name: FEATURES
+    facts:
+      - name: FUEL_PRICE
+        comment: The average price of fuel, in dollars per unit, at the time of data collection.
+        synonyms:
+          - gas_price
+          - fuel_cost
+          - petrol_price
+          - oil_price
+          - energy_cost
+          - gasoline_price
+          - diesel_price
+          - fuel_rate
+      - name: STORE
+        comment: The STORE column represents a unique identifier for a retail store location, with values ranging from 1 to 3, indicating the specific store where a transaction or event occurred.
+        synonyms:
+          - store_id
+          - retail_store
+          - outlet
+          - retail_outlet
+          - shop
+          - retail_location
+          - store_number
+      - name: TEMPERATURE
+        comment: The TEMPERATURE column represents the recorded temperature values, likely measured in degrees Celsius, which can be used to analyze and understand the relationship between temperature and other factors in the dataset.
+        synonyms:
+          - temp
+          - heat
+          - degree
+          - thermal_reading
+          - climate
+          - ambient_temperature
+          - air_temperature
+          - reading
+          - thermal_level
+    dimensions:
+      - name: CPI
+        comment: The Consumer Price Index (CPI) measures the average change in prices of a basket of goods and services consumed by households, providing an indicator of inflation and the overall cost of living.
+        synonyms:
+          - consumer_price_index
+          - inflation_rate
+          - price_index
+          - cost_of_living_index
+          - economic_indicator
+      - name: DATE
+        comment: Date of occurrence or event, represented in the format day/month/year.
+        synonyms:
+          - day
+          - calendar_date
+          - timestamp
+          - datestamp
+          - calendar_day
+          - schedule_date
+      - name: ISHOLIDAY
+        comment: Indicates whether a given date is a holiday or not.
+        synonyms:
+          - is_public_holiday
+          - is_bank_holiday
+          - holiday_indicator
+          - public_holiday_flag
+          - is_special_day
+      - name: MARKDOWN1
+        comment: Markdown percentage for the first markdown event.
+        synonyms:
+          - discount1
+          - sale_price1
+          - reduced_price1
+          - markdown_value1
+          - price_cut1
+      - name: MARKDOWN2
+        comment: Markdown amount for the second markdown event.
+        synonyms:
+          - discount2
+          - sale2
+          - promotion2
+          - markdown_percentage2
+          - price_reduction2
+          - discount_amount2
+      - name: MARKDOWN3
+        comment: Markdown percentage for the third markdown event.
+        synonyms:
+          - discount3
+          - markdown_value3
+          - sale_price3
+          - promotion3
+          - reduced_price3
+      - name: MARKDOWN4
+        comment: Markdown amount for the fourth markdown event.
+        synonyms:
+          - discount4
+          - sale4
+          - promotion4
+          - markdown_value4
+          - discount_percentage4
+          - sale_price4
+          - promotional_discount4
+      - name: MARKDOWN5
+        comment: The MARKDOWN5 column represents the average markdown amount applied to products in a specific category or group, measured in dollars, indicating the reduction in price from the original retail price to the selling price.
+        synonyms:
+          - discount5
+          - promotion5
+          - sale5
+          - markdown_percentage5
+          - discount_rate5
+          - price_reduction5
+      - name: UNEMPLOYMENT
+        comment: The percentage of the labor force that is currently unemployed and actively seeking employment.
+        synonyms:
+          - joblessness
+          - unemployment_rate
+          - unemployment_level
+          - jobless_rate
+          - labor_underutilization
+          - unemployment_percentage
+
+  - name: SALES
+    facts:
+      - name: DEPT
+        comment: Department identifier, a unique code representing a specific department within the organization.
+        synonyms:
+          - department
+          - division
+          - section
+          - category
+          - store_department
+          - department_number
+      - name: STORE
+        comment: Unique identifier for the store where the sale was made.
+        synonyms:
+          - retailer
+          - merchant
+          - outlet
+          - shop
+          - location
+          - branch
+          - warehouse
+          - market
+          - supermarket
+          - store_id
+      - name: WEEKLY_SALES
+        comment: The total sales amount for a specific week.
+        synonyms:
+          - weekly_revenue
+          - sales_per_week
+          - weekly_turnover
+          - weekly_income
+          - weekly_profit
+          - seven_day_sales
+    dimensions:
+      - name: DATE
+        comment: Date of sale, representing the calendar date when a transaction took place.
+        synonyms:
+          - day
+          - calendar_date
+          - date_value
+          - calendar_day
+          - timestamp
+      - name: ISHOLIDAY
+        comment: Indicates whether the sales transaction occurred on a holiday.
+        synonyms:
+          - is_vacation
+          - is_day_off
+          - holiday_ind
+          - is_special_day
+          - is_non_business_day
+          - is_closed
+
+  - name: STORES
+    facts:
+      - name: SIZE
+        comment: The total square footage of the store.
+        synonyms:
+          - magnitude
+          - capacity
+          - volume
+          - dimensions
+          - scale
+          - measurement
+          - extent
+          - length
+          - width
+          - height
+          - area
+          - space
+      - name: STORE
+        comment: Unique identifier for a store location.
+        synonyms:
+          - shop
+          - outlet
+          - retail_location
+          - market
+          - warehouse
+          - depot
+          - storehouse
+          - establishment
+    dimensions:
+      - name: TYPE
+        comment: The type of store, which can be one of the following - A (likely indicating a flagship or high-end store), B (possibly indicating a standard or mid-range store), or C (potentially indicating a discount or outlet store).
+        synonyms:
+          - category
+          - classification
+          - kind
+          - sort
+          - genre
+          - designation
+          - label
+          - classification_type
+
